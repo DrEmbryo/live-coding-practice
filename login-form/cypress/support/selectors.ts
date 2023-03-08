@@ -1,11 +1,4 @@
-type SelectorRecord = {
-  [key: string]: {
-    selector: string;
-    label: string;
-  };
-};
-
-export const LOGIN_SELECTORS: SelectorRecord = {
+export const LOGIN_SELECTORS = {
   username: { selector: "input", label: "@username" },
   password: { selector: "password-input", label: "@password" },
   passwordToggle: { selector: "password-toggle", label: "@passwordToggle" },

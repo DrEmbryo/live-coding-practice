@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+
+import { withTestId } from "@utils/index";
+import { LOGIN_SELECTORS } from "@cypress/support/selectors";
 
 import { PasswordFieldProps } from "../interfaces";
 
@@ -11,15 +14,23 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
 }) => {
   return (
     <>
-      <label htmlFor={label} test-id="password-label">{label} :</label> <br />
+      <label htmlFor={label}>{label} :</label>
+      <br />
       <input
-        test-id="password-input"
+        test-id={withTestId(LOGIN_SELECTORS.password.selector)}
         type={showPassword}
         id={label}
         name={label}
         placeholder={placeholder}
       />
-      {isToggleable && <span test-id="password-toggle" onClick={togglePasswordVisibility}> * </span>}
+      {isToggleable && (
+        <span
+          test-id={withTestId(LOGIN_SELECTORS.passwordToggle.selector)}
+          onClick={togglePasswordVisibility}
+        >
+          *
+        </span>
+      )}
       <br />
     </>
   );
