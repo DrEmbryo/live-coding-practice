@@ -11,14 +11,15 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
 }) => {
   return (
     <>
-      <label htmlFor={label}>{label} :</label> <br />
+      <label htmlFor={label} test-id="password-label">{label} :</label> <br />
       <input
+        test-id="password-input"
         type={showPassword}
         id={label}
         name={label}
         placeholder={placeholder}
       />
-      {isToggleable && <span onClick={togglePasswordVisibility}> *</span>}
+      {isToggleable && <span test-id="password-toggle" onClick={togglePasswordVisibility}> * </span>}
       <br />
     </>
   );
