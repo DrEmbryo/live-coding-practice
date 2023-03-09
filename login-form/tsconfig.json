@@ -3,7 +3,8 @@
     "baseUrl": "./",
     "paths": {
       "@cypress/*": ["cypress/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@src/*": ["src/*"]
     },
     "target": "ESNext",
     "useDefineForClassFields": true,

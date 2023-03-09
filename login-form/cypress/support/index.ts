@@ -1,15 +1,18 @@
 /// <reference types="cypress" />
 
+
+import { mount } from 'cypress/react18'
+
 declare global {
   namespace Cypress {
     interface Chainable {
+      mount: typeof mount;
       createAliases(selectors): Chainable<JQuery<HTMLElement>>;
     }
   }
 }
 
-Cypress.Commands.add("createAliases", (selectors: any) => {
-  const { selector, label } = selectors;
+Cypress.Commands.add("createAliases", ({ selector, label }) => {
 
   const selectByTestId = (attr) => `[test-id=${attr}]`;
 

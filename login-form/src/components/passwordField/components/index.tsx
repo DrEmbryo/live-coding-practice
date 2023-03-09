@@ -14,7 +14,7 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
 }) => {
   return (
     <>
-      <label htmlFor={label}>{label} :</label>
+      <label htmlFor={label} test-id={withTestId(LOGIN_SELECTORS.passwordLabel.selector)}>{label} :</label>
       <br />
       <input
         test-id={withTestId(LOGIN_SELECTORS.password.selector)}
