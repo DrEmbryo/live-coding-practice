@@ -8,7 +8,7 @@ import { InputFieldProps } from "../interfaces";
 const InputField: React.FC<InputFieldProps> = ({ label, placeholder }) => {
   return (
     <>
-      <label htmlFor={label}>{label} :</label> <br />
+      <label htmlFor={label} test-id={withTestId(LOGIN_SELECTORS.usernameLabel.selector)}>{label} :</label> <br />
       <input
         test-id={withTestId(LOGIN_SELECTORS.username.selector)}
         type="text"

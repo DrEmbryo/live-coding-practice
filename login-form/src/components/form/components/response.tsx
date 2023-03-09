@@ -6,7 +6,6 @@ import { LOGIN_SELECTORS } from "@cypress/support/selectors";
 import { ResponseProps } from "../interfaces";
 
 const Response: React.FC<ResponseProps> = ({ requestResult }) => {
-  console.log(requestResult);
   const errorMessage = requestResult?.message;
   return (
     <>
