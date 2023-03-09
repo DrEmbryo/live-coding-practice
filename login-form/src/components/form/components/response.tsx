@@ -10,11 +10,17 @@ const Response: React.FC<ResponseProps> = ({ requestResult }) => {
   return (
     <>
       {errorMessage ? (
-        <div test-id={withTestId(LOGIN_SELECTORS.loginError.selector)}>
+        <div
+          test-id={withTestId(LOGIN_SELECTORS.loginError.selector)}
+          className="text-center text-red-500"
+        >
           Invalid request: {errorMessage}
         </div>
       ) : (
-        <div test-id={withTestId(LOGIN_SELECTORS.loginSuccess.selector)}>
+        <div
+          test-id={withTestId(LOGIN_SELECTORS.loginSuccess.selector)}
+          className="text-center text-emerald-500"
+        >
           User name is: {requestResult.firstName} {requestResult.lastName}
         </div>
       )}
