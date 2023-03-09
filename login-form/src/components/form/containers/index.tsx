@@ -6,7 +6,7 @@ import { URL } from "../../../constants/api";
 
 const FormContainer: React.FC = () => {
   const [formFields, setFormFields] = useState({});
-  const [requestResult, setRequestResult] = useState<string>();
+  const [requestResult, setRequestResult] = useState<unknown>();
 
   const handleFormChange = (e: any) => {
     let updatedFormFields: { [key: string]: string } = { ...formFields };
@@ -24,7 +24,8 @@ const FormContainer: React.FC = () => {
       body: JSON.stringify(formFields),
     })
       .then((res) => res.json())
-      .then((data) => setRequestResult(JSON.stringify(data)));
+      .then((data) => setRequestResult(data))
+      .catch((err) => setRequestResult(err));
   };
 
   const props = { requestResult, handleFormChange, handleSubmit };

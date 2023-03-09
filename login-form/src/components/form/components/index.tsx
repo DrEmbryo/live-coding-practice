@@ -3,6 +3,7 @@ import React from "react";
 import InputField from "../../inputField";
 import PasswordField from "../../passwordField";
 import Button from "../../button";
+import Response from "./response";
 
 import { FormProps } from "../interfaces";
 
@@ -18,7 +19,9 @@ const Form: React.FC<FormProps> = ({
         <PasswordField isToggleable label="password" placeholder="123" />
         <Button>Log in</Button>
       </form>
-      {requestResult && <p>{requestResult}</p>}
+      {
+        requestResult && <Response requestResult={requestResult} />
+      }
     </>
   );
 };
