@@ -1,31 +1,8 @@
-# Task №1 Login Form
+# Live Coding Practice
 
-## Problem statement
+The Live Coding Practice Repository is a collection of code examples and exercises designed to enhance your coding skills through live coding practice.
 
-The interviewee presented with plain HTML form like this:
+Description of all task can be found in the list below:
 
-    <form>
-    <label htmlFor="username">Username:</label> <br />
-    <input type="text" id="username" name="username" value="John" /> <br />
-    <label htmlFor="password">Password:</label>
-    <br />
-    <input type="text" id="password" name="password" value="123" />
-    <br />
-    <button>Log in</button>
-    </form>
-
-The task of the Interviewee is to modify that form to have some additional functionality
-
-## The application should have functionality listed below:
-
-- An ability to make a request to API with credentials listed in api.ts
-- An ability to show data as a result of API request
-- An ability to toggle password visibility
-
-API specification can be found on dummyjson.com/docs
-
-## Restrictions:
-
-- The solution should be done without any additional libraries
-- The time limit for react + js solution should be 1h
-- The time limit for react + ts solution should be 1.5h
+- Task #1 [Login Form](Task1.md)
+- Task #2 [Shop queue](Task2.md)
