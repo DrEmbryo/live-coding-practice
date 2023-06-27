@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tooltip {
+  @apply absolute;
+}
+
+.has-tooltip .tooltip {
+  @apply z-50;
+
+  transform: translate(-50, -50%);
+}
+
+.min-h-80 {
+  min-height: 80px;
+}
