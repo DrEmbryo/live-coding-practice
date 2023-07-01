@@ -1,9 +1,9 @@
-import { Graph, GraphEdges, Node } from "../interfaces";
+import { Graph, GraphEdges, GraphNode } from "../interfaces";
 
-export const buildGraph = (edges: GraphEdges) => {
+export const buildGraph = (edges: GraphEdges): Graph => {
   let graph: Graph = {};
   for (const edge of edges) {
-    edge.forEach((node: Node) => {
+    edge.forEach((node: GraphNode) => {
       const [p1, p2] = node;
       if (!(p1 in graph)) graph[p1] = [];
       if (!(p2 in graph)) graph[p2] = [];
