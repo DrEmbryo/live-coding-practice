@@ -8,7 +8,7 @@ export type BreathFirstSearch = (
   startPosition: string,
   endPosition: string,
   visitedNodes: Set<string>
-) => {};
+) => string;
 
 export type NodeQueueItem = { node: string; path: string };
 export type NodeQueue = Array<NodeQueueItem>;

@@ -1,7 +1,7 @@
 import { Graph, GraphEdges, GraphNode } from "../interfaces";
 
 export const buildGraph = (edges: GraphEdges): Graph => {
-  let graph: Graph = {};
+  const graph: Graph = {};
   for (const edge of edges) {
     edge.forEach((node: GraphNode) => {
       const [p1, p2] = node;
