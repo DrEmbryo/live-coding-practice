@@ -2,7 +2,18 @@
 
 ## Problem statement
 
-You are presented with a collection of graph edges that represent roads connecting cities. Your task is to create a UI that allows users to select two cities and determine if there is a path between them.
+You are presented with a collection of undirected graph edges that represent roads connecting cities. Your task is to create a UI that allows users to select two cities and determine if there is a path between them.
+
+    const Roads = [
+        [["a", "b"],["a", "g"],],               // city A
+        [["b", "a"],["b", "d"],["b", "c"],],    // city B
+        [["c", "b"],["c", "e"],],               // city C
+        [["e", "c"],["e", "d"],["e", "f"],],    // city E
+        [["d", "e"],["d", "b"],["d", "g"],],    // city D
+        [["g", "a"],["g", "d"],["g", "h"],],    // city G
+        [["f", "e"],["f", "h"],],               // city F
+        [["h", "g"],["h", "f"],],               // city H
+    ];
 
 ## Requirements
 
