@@ -8,3 +8,4 @@ A description of all tasks can be found in the list below:
 
 - Task #1 [Login Form](Task1.md)
 - Task #2 [Shop queue](Task2.md)
+- Task #3 [Path between cities](Task3.md)
