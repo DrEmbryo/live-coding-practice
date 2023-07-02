@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.segment-a {
+  width: 40px;
+  height: 10px;
+  top: 0px;
+  right: 10px;
+}
+.segment-b {
+  width: 10px;
+  height: 40px;
+  top: 10px;
+  right: 0px;
+}
+.segment-c {
+  width: 10px;
+  height: 40px;
+  left: 0px;
+  top: 10px;
+}
+.segment-d {
+  width: 40px;
+  height: 10px;
+  bottom: 0px;
+  right: 10px;
+}
+.segment-e {
+  width: 10px;
+  height: 40px;
+  bottom: 10px;
+  left: 0px;
+}
+.segment-f {
+  width: 10px;
+  height: 40px;
+  bottom: 10px;
+  right: 0px;
+}
+.segment-g {
+  width: 40px;
+  height: 10px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.container {
+  width: 60px;
+  height: 110px;
+}
