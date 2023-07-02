@@ -4,6 +4,8 @@
 
 You are presented with a collection of undirected graph edges that represent roads connecting cities. Your task is to create a UI that allows users to select two cities and determine if there is a path between them.
 
+### Data sample for a task
+
     const Roads = [
         [["a", "b"],["a", "g"],],               // city A
         [["b", "a"],["b", "d"],["b", "c"],],    // city B
