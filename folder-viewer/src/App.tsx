@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import { Typography } from "@material-tailwind/react";
+
+import { FolderComponent } from "./components/folder";
+
+import { Folder } from "./interfaces";
+
+import { folders } from "./constants";
+
+export const App = () => {
+  const [openFolders, setOpenFolders] = useState<Set<string>>(new Set());
+
+  const handleToggleFolder = (id: string) => {
+    const copy = new Set(openFolders);
+    if (copy.has(id)) {
+      copy.delete(id);
+    } else {
+      copy.add(id);
+    }
+    setOpenFolders(copy);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="w-screen h-screen bg-gray-900">
+      <div className="h-screen w-80 bg-gray-800">
+        <Typography
+          variant="paragraph"
+          color="white"
+          className="flex items-center justify-center h-10 font-bold uppercase border-b-2 border-gray-500"
+        >
+          File Viewer
+        </Typography>
+        <div className="relative">
+          {folders.map((folder) => {
+            const hasItems = !!folder.subfolders.length;
+            return (
+              <FolderComponent
+                folder={folder as Folder}
+                openedIndex={openFolders}
+                isCollapsible={hasItems}
+                handleToggleFolder={handleToggleFolder}
+              />
+            );
+          })}
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    </div>
+  );
+};
