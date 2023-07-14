@@ -12,3 +12,4 @@ A description of all tasks can be found in the list below:
 - Task #4 [Folder viewer](Task4.md)
 - Task #5 [Seven-segment display clock](Task5.md)
 - Task #6 [Caesar cipher encryption](Task6.md)
+- Task #7 [Breaking Bad](Task7.md)

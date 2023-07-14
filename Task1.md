@@ -29,5 +29,3 @@ The application should have the following functionality:
 - Implement a toggle functionality to show/hide the password when clicking on an eye icon.
 - Use React along with JavaScript or TypeScript, depending on the chosen variant.
 - Avoid using any additional libraries.
-- The time limit for a React + JavaScript solution is 1 hour.
-- The time limit for a React + TypeScript solution is 1.5 hours.
