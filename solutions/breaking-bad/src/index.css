@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form_results {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.form_results:has(> div) {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
