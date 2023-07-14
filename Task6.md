@@ -17,8 +17,7 @@ You are tasked to create application that displays a Caesar cipher encryption al
 ## Requirements
 
 - Ui should have input fields for encrypting/decrypting messages, and a representation field for an encrypted/decrypted message.
-- Ensure that the seven-segment display segments are visually distinguishable and clearly represent the numbers.
-- Implement any additional features or enhancements to improve the user experience or clock functionality.
+- The UI should handle both uppercase and lowercase letters.
 
 ## Notes
 
