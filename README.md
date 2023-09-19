@@ -14,3 +14,4 @@ A description of all tasks can be found in the list below:
 - Task #6 [Caesar cipher encryption](Task6.md)
 - Task #7 [Breaking Bad](Task7.md)
 - Task #8 [Typing monkey](Task8.md)
+- Task #9 [Tic-Tac-Toe](Task9.md)
